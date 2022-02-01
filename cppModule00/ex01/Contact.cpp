@@ -1,5 +1,5 @@
 #include "Contact.hpp"
-
+#include <ctype.h>
 void    Contact::SetFN()
 {
     std::cout << "Enter First Name" << std::endl;
@@ -19,10 +19,16 @@ void    Contact::SetNN()
     std::cin >> Nickname;
 }
 
-void    Contact::SetPN()
+int    Contact::SetPN()
 {
     std::cout << "Enter Phone number" << std::endl;
     std::cin >> PhoneNumber;
+    for (int i = 0; PhoneNumber[i]; i++)
+    {
+        if (PhoneNumber[i] < 48 || PhoneNumber[i] > 57)
+            return (1);
+    }
+    return (0);
 }
 
 void    Contact::SetDS()

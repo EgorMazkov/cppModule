@@ -14,7 +14,7 @@ class Contact
         void SetFN();
         void SetLN();
         void SetNN();
-        void SetPN();
+        int SetPN();
         void SetDS();
         std::string getFN();
         std::string getLN();

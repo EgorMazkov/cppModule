@@ -4,7 +4,7 @@
 OS		=	$(shell uname)
 TARGET	=	phonebook
 RM		=	rm -rf
-FLAGS	=	-Wall -Wextra -Werror -c -std=c++98 -pedantic
+FLAGS	=	-Wall -Wextra -Werror -c -std=c++98 -pedantic -g
 
 ifeq ($(OS), Darwin)
 CC		=	clang++
