@@ -1,3 +1,6 @@
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
+
 #include <string>
 #include <stdlib.h>
 #include <iostream>
@@ -23,3 +26,4 @@ class Contact
         std::string getDS();
 };
 
+#endif
