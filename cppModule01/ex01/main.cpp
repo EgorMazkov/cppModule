@@ -3,8 +3,11 @@
 int main()
 {
     int n = 10;
-    while (n != 0)
+    Zombie  *horde = ZombieHorde(n, "zombie");
+    for (int i = 0; i < n; i++)
     {
-        
+        horde[i].announce();
     }
+    delete [] horde;
+    return (0);
 }

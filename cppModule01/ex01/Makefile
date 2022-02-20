@@ -1,10 +1,10 @@
-NAME			=	zombie
+NAME			=	zombieHorde
 
 CC				=	clang++
 
 CDEBUG			=	-fsanitize=adress -g -std=c++98
 
-SRC				=	Zombie.cpp main.cpp
+SRC				=	Zombie.cpp main.cpp zombieHorde.cpp
 
 OBJ				=	$(SRC:.cpp=.o)
 OBJ_DIR			=	./objs/
