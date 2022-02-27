@@ -1,10 +1,10 @@
-NAME			=	ScavTrap
+NAME			=	FragTrap
 
 CC				=	c++
 
 CDEBUG			=	 -Wall -Wextra -Werror -std=c++98 -g
 
-SRC				=	ClapTrap.cpp main.cpp ScavTrap.cpp
+SRC				=	ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJ				=	$(SRC:.cpp=.o)
 OBJ_DIR			=	./objs/

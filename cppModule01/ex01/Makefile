@@ -13,18 +13,19 @@ OBJS			=	$(addprefix $(OBJ_DIR), $(OBJ))
 all				:	$(NAME)
 
 $(NAME)			:	$(OBJS)
-					$(CC) -o $@ $^
+					@$(CC) -o $@ $^
+					@echo DONE
 
 $(OBJ_DIR)%.o	:	%.cpp
 					@mkdir -p $(OBJ_DIR)
-					$(CC) -c $< -o $@
+					@$(CC) -c $< -o $@
 
 .PHONY			:	all fclean clean re
 
 clean			:
-				rm -rf $(OBJ_DIR)
+				@rm -rf $(OBJ_DIR)
 
 fclean			:	clean
-				rm -rf $(NAME)
+				@rm -rf $(NAME)
 
 re				:	fclean all

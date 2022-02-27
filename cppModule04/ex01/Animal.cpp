@@ -32,8 +32,3 @@ const std::string Animal::getType() const
 {
 	return (type);
 }
-
-void Animal::makeSound() const
-{
-	std::cout << "And the lone silence answered..." << std::endl;
-}

@@ -1,10 +1,11 @@
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main()
 {
-	ClapTrap A("first");
-	ScavTrap B("second");
-	FragTrap C("third");
+	ClapTrap A("Anton");
+	ScavTrap B("Ildar");
+	FragTrap C("Egor");
 
 	B.guardGate();
 	B.attack(A.GetN());
