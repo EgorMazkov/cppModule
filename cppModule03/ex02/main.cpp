@@ -11,6 +11,6 @@ int	main()
 	B.attack(A.GetN());
 	A.takeDamage(B.GetAD());
 	A.beRepaired(100);
-	C.hingFixesGuys();
+	C.highFivesGuys();
 	return (0);
 }

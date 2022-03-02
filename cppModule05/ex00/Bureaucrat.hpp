@@ -3,11 +3,14 @@
 #include <string>
 #include <iostream>
 
+using namespace std;
+
 
 class Bureaucrat
 {
 private:
-    std::string Name;
+    string Name;
+    int grade;
 public:
     Bureaucrat();
     ~Bureaucrat();
