@@ -5,16 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(lldb) Запустить",
-            "type": "cppdbg",
+            "type": "lldb",
             "request": "launch",
-            "program": "/Users/ghumbert/Desktop/cppModule/cppModule/cppModule04/ex00/Polymorphism",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb"
+            "name": "Debug",
+            "program": "/Users/ghumbert/Desktop/cppModule/cppModule/cppModule05/ex01/Bureaucrat",
+            "args": ["2", "1", "1"],
+            "cwd": "${workspaceFolder}"
         }
     ]
 }

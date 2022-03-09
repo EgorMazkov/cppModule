@@ -1,3 +1,4 @@
+
 #include "Bureaucrat.hpp"
 
 int main(int ac, char **av)
@@ -7,12 +8,14 @@ int main(int ac, char **av)
     {
         try
         {
-
+            Bureaucrat bur("my", atoi(av[1]));
+            cout << bur << endl;
         }
         catch(const std::exception& e)
         {
-            cerr << e.what() << '\n';
+            std::cerr << e.what() << '\n';
         }
+        
     }
     return (0);
 }

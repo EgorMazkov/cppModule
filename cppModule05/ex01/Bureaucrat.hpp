@@ -4,6 +4,7 @@
 #include <iostream>
 #include <exception>
 #include <sstream>
+#include "Form.hpp"
 
 using namespace std;
 
@@ -13,6 +14,8 @@ std::string to_string(T arg){
 	ss << arg;
 	return ss.str();
 }
+
+class Form;
 
 class Bureaucrat
 {
@@ -29,6 +32,7 @@ public:
     Bureaucrat(const Bureaucrat &B);
 	Bureaucrat& operator=(const Bureaucrat &B);
     Bureaucrat(string name, int grade);
+	bool signForm(Form &F);
 
 	struct GradeTooHighException : public std::exception
 	{

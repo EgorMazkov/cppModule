@@ -14,7 +14,6 @@ public:
 	Animal(const Animal &C);
 	Animal& operator=(const Animal &C);
 	const std::string getType() const;
-	virtual void makeSound() const;
 	virtual void getBrainAddress() const = 0;
 };
 

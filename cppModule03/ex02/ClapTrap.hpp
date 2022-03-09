@@ -15,7 +15,6 @@ protected:
     int HitPoints;
     int AttackDamage;
     std::string Name;
-
 public:
     ClapTrap();
     ~ClapTrap();
@@ -28,6 +27,7 @@ public:
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
     ClapTrap& operator=(const ClapTrap& C);
+    int dead();
 };
 
 #endif
