@@ -70,6 +70,20 @@ int Form::getGradeRequiredToExecute() const
 	return (GradeRequiredToExecute);
 }
 
+void Form::execute(Bureaucrat const & executor) const
+{
+	if (executor.getGrade() > getGradeRequiredToExecute())
+	{
+		std::cout << "action on " << name << " with " << executor.getName() << " it's a failure ";
+		throw GradeTooLowException(executor.getGrade());
+	}
+	if (!getCheckSignature())
+	{
+		std::cout << "action on " << name << " with " << executor.getName() << " it's a failure" << std::endl;
+		throw FormIsNotSignedException(gradeRequiredToExecute);
+	}
+	action();
+}
 
 std::ostream& operator<<(std::ostream &out, const Form &F)
 {

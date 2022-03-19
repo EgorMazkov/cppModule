@@ -1,13 +1,19 @@
 #ifndef SHRUBBERYCREATIONFORM
 #define SHRUBBERYCREATIONFORM
-
-class ShrubberyCreationForm
+#include <string.h>
+#include <iostream>
+#include <fstream>
+#include "Form.hpp"
+class ShrubberyCreationForm : public Form
 {
 private:
-    /* data */
+	ShrubberyCreationForm& operator=(const ShrubberyCreationForm &S);
 public:
-    ShrubberyCreationForm(/* args */);
-    ~ShrubberyCreationForm();
+	ShrubberyCreationForm();
+	~ShrubberyCreationForm();
+	ShrubberyCreationForm(const ShrubberyCreationForm &S);
+	ShrubberyCreationForm(std::string target);
+	virtual void action() const;
 };
 
 #endif

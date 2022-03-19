@@ -35,6 +35,8 @@ public:
     bool getCheckSignature() const;
     int getGradeRequiredToSign() const;
     int getGradeRequiredToExecute() const;
+    virtual void action() const = 0;
+	void execute(Bureaucrat const & executor) const;
 
     struct GradeTooHighException : public std::exception
     {
@@ -55,6 +57,18 @@ public:
         virtual const char *what() const throw()
         {
             std::string a("GradeTooLowException: ");
+            a += std::to_string(m_nGrade);
+            return a.c_str();
+        }
+    };
+
+    struct FormIsNotSignedException : public std::exception
+    {
+        const int m_nGrade;
+        FormIsNotSignedException(int grade) : m_nGrade(grade) {}
+        virtual const char *what() const throw()
+        {
+            std::string a("FormIsNotSignedException: ");
             a += std::to_string(m_nGrade);
             return a.c_str();
         }

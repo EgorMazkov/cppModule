@@ -1,13 +1,19 @@
-#ifndef ROBOTOMYREQUESTFORM
-#define ROBOTOMYREQUESTFORM
+#ifndef ROBOTOMYREQUESTFORM_HPP
+#define ROBOTOMYREQUESTFORM_HPP
+#include <string>
+#include <iostream>
+#include "Form.hpp"
 
-class RobotomyRequestForm
+class RobotomyRequestForm: public Form
 {
 private:
-
+	RobotomyRequestForm& operator=(const RobotomyRequestForm &R);
 public:
-    RobotomyRequestForm();
-    ~RobotomyRequestForm();
+	RobotomyRequestForm();
+	~RobotomyRequestForm();
+	RobotomyRequestForm(const RobotomyRequestForm &S);
+	RobotomyRequestForm(std::string target);
+	virtual void action() const;
 };
 
 #endif

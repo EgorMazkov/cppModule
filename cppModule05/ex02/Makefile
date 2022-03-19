@@ -28,6 +28,7 @@ clean			:
 
 fclean			:	clean
 				@rm -rf $(NAME)
+				@rm -rf home_shrubbery
 				@echo "\033[32m"fclean DONE
 
 re				:	fclean all
