@@ -26,7 +26,6 @@ public:
 		virtual const char *what() const throw()
 		{
 			std::string a("WrongFormNameException: ");
-			// switch (Intern::HashIt(m_nGrade))
 			switch (m_nGrade)
 			{
 				case 1292:
