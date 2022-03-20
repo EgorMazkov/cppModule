@@ -80,7 +80,7 @@ void Form::execute(Bureaucrat const & executor) const
 	if (!getCheckSignature())
 	{
 		std::cout << "action on " << name << " with " << executor.getName() << " it's a failure" << std::endl;
-		throw FormIsNotSignedException(gradeRequiredToExecute);
+		throw FormIsNotSignedException(GradeRequiredToExecute);
 	}
 	action();
 }

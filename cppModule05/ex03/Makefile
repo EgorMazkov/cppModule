@@ -1,10 +1,10 @@
-NAME			=	Bureaucrat
+NAME			=	Intern
 
 CC				=	c++ -g
 
 CDEBUG			=	 -Wall -Wextra -Werror -std=c++98
 
-SRC				=	main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRC				=	main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 
 OBJ				=	$(SRC:.cpp=.o)
 OBJ_DIR			=	./objs/

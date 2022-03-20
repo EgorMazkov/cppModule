@@ -6,8 +6,7 @@
 
 int main(int ac, char **av)
 {
-    (void)av;
-    if (ac == 4)
+    if (ac == 2)
     {
         try
         {
@@ -25,7 +24,7 @@ int main(int ac, char **av)
         try
         {
             Bureaucrat bureaucrat("me", std::atoi(av[1]));
-            Form *form = new RobotomyRequestForm("home");
+            Form *form = new RobotomyRequestForm("Anton");
             std::cout << bureaucrat << '\n' << *form << '\n';
             bureaucrat.signForm(*form);
             bureaucrat.executeForm(*form);
@@ -38,7 +37,7 @@ int main(int ac, char **av)
         try
         {
             Bureaucrat bureaucrat("me", std::atoi(av[1]));
-            Form *form = new PresidentialPardonForm("home");
+            Form *form = new PresidentialPardonForm("Ildar");
             std::cout << bureaucrat << '\n' << *form << '\n';
             bureaucrat.signForm(*form);
             bureaucrat.executeForm(*form);
