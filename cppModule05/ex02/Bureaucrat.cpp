@@ -74,7 +74,7 @@ bool Bureaucrat::signForm(Form &F)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	return (false);
+	return (true);
 }
 
 bool Bureaucrat::executeForm(Form const & form)

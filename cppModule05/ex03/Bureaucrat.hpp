@@ -40,6 +40,7 @@ public:
 		const int m_nGrade;
 		GradeTooHighException(int grade) : m_nGrade(grade){}
 		virtual const char *what() const throw() {
+			// std::string a("GradeTooHighException");
 			std::string a("GradeTooHighException: ");
 			a += to_string(m_nGrade);
 			return a.c_str();
@@ -51,6 +52,7 @@ public:
 		GradeTooLowException(int grade) : m_nGrade(grade){}
 		virtual const char *what() const throw()
 		{
+			// std::string a("GradeTooLowException");
 			std::string a("GradeTooLowException: ");
 			a += to_string(m_nGrade);
 			return a.c_str();
