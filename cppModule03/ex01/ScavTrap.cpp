@@ -20,16 +20,16 @@ ScavTrap::ScavTrap(std::string CName) : ClapTrap(100, 50, 20, CName)
 	std::cout << "Constructor with a name called, " << Name << " created! (ScavTrap)" << std::endl;
 }
 
-ScavTrap &ScavTrap::operator=(const ScavTrap &C)
-{
-	if (this == &C)
-		return (*this);
-	Name = C.Name;
-	HitPoints = C.HitPoints;
-	EnergyPoints = C.EnergyPoints;
-	AttackDamage = C.AttackDamage;
-	return (*this);
-}
+// ScavTrap &ScavTrap::operator=(const ScavTrap &C)
+// {
+// 	if (this == &C)
+// 		return (*this);
+// 	Name = C.Name;
+// 	HitPoints = C.HitPoints;
+// 	EnergyPoints = C.EnergyPoints;
+// 	AttackDamage = C.AttackDamage;
+// 	return (*this);
+// }
 
 void ScavTrap::attack(const std::string &target)
 {

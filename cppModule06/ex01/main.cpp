@@ -15,10 +15,10 @@ Serialization* deserialize(uintptr_t raw)
 int	main()
 {
 	Serialization boba;
-	std::cout <<	deserialize(serialize(&boba))->s << '\n' <<
-					deserialize(serialize(&boba))->h << '\n' <<
+	std::cout <<	deserialize(serialize(&boba))->b << '\n' <<
 					deserialize(serialize(&boba))->i << '\n' <<
-					deserialize(serialize(&boba))->t << std::endl;
+					deserialize(serialize(&boba))->q << '\n' <<
+					deserialize(serialize(&boba))->a << std::endl;
 	std::cout <<	&boba << '\n' <<
 					deserialize(serialize(&boba)) << std::endl;
 	return (0);

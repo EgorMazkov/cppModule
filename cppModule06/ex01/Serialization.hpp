@@ -3,14 +3,14 @@
 
 struct Serialization
 {
-	const char s;
-	const char h;
+	const char b;
 	const char i;
-	const char t;
-	Serialization():	s('b'),
-			h('i'),
-			i('b'),
-			t('a')
+	const char q;
+	const char a;
+	Serialization():	b('b'),
+			i('i'),
+			q('b'),
+			a('a')
 	{}
 };
 

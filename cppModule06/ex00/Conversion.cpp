@@ -6,9 +6,15 @@ Conversion::Conversion(char *str): intNum(), charNum(), floatNum(), doubleNum()
     if (!str)
         throw NotStr();
     std::string string = str;
-    if (std::isdigit(static_cast<unsigned char>(*str)))
+    if (str[0] == '-' || std::isdigit(static_cast<unsigned char>(*str)))
     {
         intNum = std::stoi(str);
+        if (intNum == 0)
+        {
+            charNumstr = ND;
+            floatNum = std::stof(string, &end);
+            doubleNum = std::stoi(string, &end);
+        }
         if (intNum > 127 || intNum < 32)
             charNumstr = ND;
         else
@@ -51,12 +57,12 @@ Conversion& Conversion::operator=(const Conversion &B)
 
 void Conversion::printIntNum()
 {
-    if (intNum)
+    if (intNumstr.length() != 0)
     {
-        std::cout << "Int: " << intNum << std::endl;
+        std::cout << "Int: " << intNumstr << std::endl;
         return ;
     }
-    std::cout << "Int: " << intNumstr << std::endl;
+    std::cout << "Int: " << intNum << std::endl;
 }
 
 void Conversion::printCharNum()
@@ -71,23 +77,23 @@ void Conversion::printCharNum()
 
 void Conversion::printFloatNum()
 {
-    if (floatNum)
+    if (floatNumstr.length() != 0)
     {
-        std::cout << "Float: " << std::setprecision(1) << std::fixed << floatNum << 'f' << std::endl;
+            std::cout << "Float: " << floatNumstr << std::endl;
         return ;
     }
-        std::cout << "Float: " << floatNumstr << std::endl;
+    std::cout << "Float: " << std::setprecision(1) << std::fixed << floatNum << 'f' << std::endl;
 
 }
 
 void Conversion::printDoubleNum()
 {
-    if (doubleNum)
+    if (doubleNumstr.length() != 0)
     {
-        std::cout << "Double: " << std::setprecision(1) << std::fixed << doubleNum << std::endl;
+        std::cout << "Double: " << doubleNumstr << std::endl;
         return ;
     }
-    std::cout << "Double: " << doubleNumstr << std::endl;
+    std::cout << "Double: " << std::setprecision(1) << std::fixed << doubleNum << std::endl;
 }
 
 const char* Conversion::NotStr::what() const throw()
