@@ -12,7 +12,7 @@ void iter(T *array, unsigned int len, void (*func)(T&))
 		(*func)(array[i]);
 		std::cout << array[i] << '\n';
 	}
-	std::cout << std::endl;
+	std::cout << '\n';
 }
 
 #endif
